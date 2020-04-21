@@ -11,5 +11,16 @@
   .preview {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  .collection-preview {
+    
+    .preview {
+      flex-direction: row;
+    }
+  }
+
 }
