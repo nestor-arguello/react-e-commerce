@@ -13,7 +13,6 @@ import CheckoutPage from './pages/checkout/checkout.component.jsx'
 import { auth, createUserProfileDocument } from './firebase/firebase.util';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
-import BackPortfolioBtn from './components/back-portfolio-btn/back-portfolio-btn.component';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -42,8 +41,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <BackPortfolioBtn />
+      <div className="main-wrapper">
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />

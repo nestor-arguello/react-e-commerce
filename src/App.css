@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans Condensed';
-  padding: 20px 60px;
+  padding: 20px 0;
 }
 
 a {
@@ -10,4 +10,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 20px 60px;
+  }
+  .main-wrapper {
+    flex-direction: column;
+  }
 }

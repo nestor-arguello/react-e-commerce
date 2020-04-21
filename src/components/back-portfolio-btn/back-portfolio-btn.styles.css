@@ -1,9 +1,9 @@
 .back-home-btn {
-  position: absolute;
-  top:15px;
-  left:15px; 
   background-color: #4986e7;
   border-radius: 4px;
+  width: 50px;
+  height: 45px;
+  margin: 14px auto;
 }
 .back-home-btn:hover {
   opacity: 0.7;
@@ -15,4 +15,10 @@
   font-size: 32px;
   font-weight: 400;
   padding: 0 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .back-home-btn {
+    margin: 0;
+  }
 }
