@@ -2,9 +2,19 @@ import React from 'react';
 
 import './checkout-item.styles.scss';
 import { connect } from 'react-redux';
-import { clearCartItem, addCartItem, removeCartItem } from '../../redux/cart/cart.actions';
+import {
+  clearCartItem,
+  addCartItem,
+  removeCartItem,
+} from '../../redux/cart/cart.actions';
 
-const CheckoutItem = ({ item, addCartItem, removeCartItem, clearCartItem, ...props }) => {
+const CheckoutItem = ({
+  item,
+  addCartItem,
+  removeCartItem,
+  clearCartItem,
+  ...props
+}) => {
   const { name, quantity, price, imageUrl } = item;
 
   const handleClearCartItem = item => () => clearCartItem(item);
@@ -13,10 +23,12 @@ const CheckoutItem = ({ item, addCartItem, removeCartItem, clearCartItem, ...pro
 
   return (
     <div className="checkout-item">
-      <div className="image-container">
-        <img src={imageUrl} alt="item" />
+      <div className="image-and-name-container">
+        <div className="image-container">
+          <img src={imageUrl} alt="item" />
+        </div>
+        <span className="name">{name}</span>
       </div>
-      <span className="name">{name}</span>
       <span className="quantity">
         <div className="arrow" onClick={handleRemoveCartItem(item)}>
           &#10094;

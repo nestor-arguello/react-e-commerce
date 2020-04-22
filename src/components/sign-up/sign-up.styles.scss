@@ -1,9 +1,21 @@
 .sign-up {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  max-width: 380px;
+  width: 90%;
 
   .title {
     margin: 10px 0;
+  }
+
+  .button-container {
+    display: flex;  
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .sign-up {
+    width: 100%;
   }
 }

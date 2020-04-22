@@ -15,6 +15,7 @@ import BackPortfolioBtn from '../back-portfolio-btn/back-portfolio-btn.component
 const Header = ({ currentUser, isHidden, ...props }) => {
   return (
     <div className="header">
+      {!isHidden && <CartDropdown />}
       <div className="fixed-container">
         <div className="btn-and-logo-container">
           <BackPortfolioBtn />
@@ -40,7 +41,6 @@ const Header = ({ currentUser, isHidden, ...props }) => {
           )}
           <CartIcon />
         </div>
-        {!isHidden && <CartDropdown />}
       </div>
     </div>
   );
